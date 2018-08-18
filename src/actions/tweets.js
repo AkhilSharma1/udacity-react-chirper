@@ -1,8 +1,8 @@
-export const SET_AUTHED_USER = "SET_AUTHED_USER";
+export const RECEIVE_TWEETS = "RECEIVE_TWEETS";
 
-export function setAuthedUser(id) {
+export function receiveTweets(tweets) {
   return {
-    type: SET_AUTHED_USER,
-    id
+    type: RECEIVE_TWEETS,
+    tweets
   };
 }
