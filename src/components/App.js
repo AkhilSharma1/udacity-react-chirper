@@ -1,9 +1,4 @@
 import React, { Component } from 'react'
-
-function handleData () {
-  return (dispatch) => {}
- }
-
 class App extends Component {
   
 
