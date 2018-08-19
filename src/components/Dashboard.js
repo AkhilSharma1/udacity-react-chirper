@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import tweets from "../reducers/tweets";
 
 class Dashboard extends Component {
   render() {
@@ -9,9 +8,11 @@ class Dashboard extends Component {
         <h3 className="center">Your timeline</h3>
         <ul className="dashboard-list">
           {this.props.tweetsId.map(id => {
-            <li key={id}>
-              <div>TWEET ID: {id}</div>
-            </li>;
+            return (
+              <li key={id}>
+                <div>TWEET ID: {id}</div>
+              </li>
+            );
           })}
         </ul>
       </div>
@@ -27,4 +28,4 @@ function mapStateToProps({ tweets }) {
   };
 }
 
-export default Dashboard;
+export default connect(mapStateToProps)(Dashboard);
