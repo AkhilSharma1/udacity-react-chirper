@@ -10,10 +10,8 @@ export function handleInitialData() {
   return dispatch => {
     dispatch(showLoading());
     return getInitialData().then(({ users, tweets }) => {
-      console.log(tweets[0]);
-      console.log("fffff");
-      dispatch(receiveTweets(tweets));
       dispatch(receiveUsers(users));
+      dispatch(receiveTweets(tweets));
       dispatch(setAuthedUser(AUTHED_ID));
       dispatch(hideLoading());
     });
